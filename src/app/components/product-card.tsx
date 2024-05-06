@@ -27,7 +27,7 @@ export function ProductCard({ product, onClick, activeProduct }: ProductCardProp
     DEFAULT_PROPERTY_TO_DISPLAY
   );
 
-  const isActive = activeProduct?.index === product.index;
+  const isActive = activeProduct?.id === product.id;
   const activeClasses = classNames({ "active-card": isActive });
 
   useEffect(() => {
@@ -53,7 +53,7 @@ export function ProductCard({ product, onClick, activeProduct }: ProductCardProp
   return (
     <Card sx={{ maxWidth: 345 }} className={activeClasses}>
       <CardActionArea onClick={handleClick}>
-        <CardMedia component="img" height="140" image={product.picture} alt="green iguana" />
+        <CardMedia component="img" height="140" image={product.image} alt="green iguana" />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
             {product[currentProperty]}

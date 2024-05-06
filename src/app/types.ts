@@ -1,15 +1,13 @@
 export type Product = {
-  index: number;
-  title: string,
-  isActive: boolean;
-  balance: string;
-  picture: string;
-  age: number;
-  eyeColor: string;
-  name: string;
-  gender: string;
+  title: string;
+  image: string;
   company: string;
+  name: string;
   email: string;
+  balance: string;
+  eyeColor: string;
+  gender: string;
   phone: string;
   address: string;
+  id: number;
 };

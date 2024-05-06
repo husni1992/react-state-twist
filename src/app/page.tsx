@@ -2,18 +2,9 @@
 
 import { useEffect, useState } from "react";
 
-import {
-  AppBar,
-  Button,
-  Grid,
-  IconButton,
-  LinearProgress,
-  Toolbar,
-  Typography,
-} from "@mui/material";
+import { AppBar, Grid, LinearProgress, Toolbar } from "@mui/material";
 import Chip from "@mui/material/Chip";
 import Stack from "@mui/material/Stack";
-import MenuIcon from "@mui/icons-material/Menu";
 
 import { Product } from "./types";
 import { ProductCard } from "./components/product-card";
@@ -37,8 +28,6 @@ export default function Home() {
   };
 
   useEffect(() => {
-    console.count("render");
-
     getProducts();
   }, []);
 
@@ -62,7 +51,7 @@ export default function Home() {
           </AppBar>
         )}
         {products.map((product) => (
-          <Grid item xs={12} sm={6} md={4} lg={2} key={product.index}>
+          <Grid item xs={12} sm={6} md={4} lg={2} key={product.id}>
             <ProductCard
               activeProduct={activeProduct}
               product={product}
