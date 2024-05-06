@@ -1,4 +1,31 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# React Again For Good
+
+This is a React App bootstrapped with Next.js. The main goal of this project is to showcase advanced React skills by handling complex state management scenarios.
+
+## Demo
+
+### You can check out the live demo of the project [here](https://husni1992.github.io/react-state-twist/).
+
+## Features
+
+- Complex state management in React
+- Use of modern React features like hooks
+- Integration with Next.js for server-side rendering and static site generation
+- Use of Material UI for component styling
+
+## Application Flow
+
+1. The application fetches a list of items from an API at startup.
+2. Each item is displayed in a card on the main page.
+3. When a card is clicked:
+   - The clicked item becomes the "active" item.
+   - The active item's name is displayed in a top bar.
+   - The card's appearance changes (e.g., a border is added) to indicate it's the active item.
+4. If the active card is clicked again:
+   - The displayed property of the item rotates to the next one (e.g., from title to email).
+5. When a different card is clicked:
+   - The previously active card returns to its normal state.
+   - The newly clicked card becomes the active item and its first property is displayed in the top bar.
 
 ## Getting Started
 
@@ -6,31 +33,3 @@ First, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
