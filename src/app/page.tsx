@@ -40,7 +40,7 @@ export default function Home() {
       {isLoading && <LinearProgress />}
       <Grid container spacing={2} style={{ padding: 20 }}>
         {activeProduct && (
-          <AppBar position="sticky" color="info">
+          <AppBar position="sticky" color="transparent">
             <Toolbar>
               <Grid item xs={12}>
                 <Stack direction="row" spacing={1} justifyContent="center">
