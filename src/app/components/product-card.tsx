@@ -13,6 +13,8 @@ import classNames from "classnames";
 import "./styles.css";
 import { useEffect, useState } from "react";
 import { getNextKeyOfObject } from "./utils";
+import { useDispatch } from "react-redux";
+import { setActiveProduct } from "../state/gridSlice";
 
 export interface ProductCardProps {
   product: Product;
@@ -22,7 +24,9 @@ export interface ProductCardProps {
 
 const DEFAULT_PROPERTY_TO_DISPLAY: keyof Product = "company";
 
-export function ProductCard({ product, onClick, activeProduct }: ProductCardProps) {
+export function ProductCard({ product, activeProduct }: ProductCardProps) {
+  const dispatch = useDispatch();
+
   const [currentProperty, setCurrentProperty] = useState<keyof Product>(
     DEFAULT_PROPERTY_TO_DISPLAY
   );
@@ -38,7 +42,7 @@ export function ProductCard({ product, onClick, activeProduct }: ProductCardProp
 
   function handleClick() {
     if (!isActive) {
-      onClick(product);
+      dispatch(setActiveProduct(product));
       return;
     }
 
