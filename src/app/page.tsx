@@ -9,6 +9,7 @@ import Stack from "@mui/material/Stack";
 import { Product } from "./types";
 import { ProductCard } from "./components/product-card";
 import { API_URI } from "@/config";
+import { fetchProducts } from "./services/product.service";
 
 export default function Home() {
   const [isLoading, setLoading] = useState(true);
@@ -17,8 +18,7 @@ export default function Home() {
 
   const getProducts = async () => {
     try {
-      const res = await fetch(API_URI);
-      const data = await res.json();
+      const data = await fetchProducts();
       setProducts(data);
     } catch (err) {
       console.error(err);
