@@ -36,4 +36,5 @@ npm run dev
 ```
 
 ## This is free to use and reproduce with changes
-Feel free to make any PR. 
+Feel free to make any PR in this repo.
+
