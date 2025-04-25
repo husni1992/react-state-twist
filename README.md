@@ -33,3 +33,7 @@ First, run the development server:
 
 ```bash
 npm run dev
+```
+
+## This is free to use and reproduce with changes
+Feel free to make any PR. 
